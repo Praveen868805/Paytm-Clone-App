@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        body{
+            margin:0% ;
+        }
+        .nav-bar{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            padding: 1% 6%;
+            position: sticky;
+            top: 0px;
+            background-color: white;
+        }
+        .nav-bar a{
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+            font-family: Inter, sans-serif;
+            font-weight: 700;
+        }
+        .signin{
+            background-color: #00baf2;
+            padding: 8px 6px 4px 6px;
+            width: 7%;
+            font-size: 13px !important;
+            text-align: center !important;
+            border-radius: 25px;
+            color: white !important;
+        }
+        .signin i{
+           background-color: blue;
+           padding: 5%;
+           float: right;
+           border-radius: 50%;
+        }
+        .signin:hover{
+            background-color: blue;
+        }
+        .signin:hover i{
+            background-color: #00baf2;
+        }
+        .anounce{
+            background-color: rgb(255, 217, 0);
+            padding: 5px 25px;
+            text-align: center;
+            font-family: Inter, sans-serif;
+            font-size: 13px;
+        }
+        .anounce a{
+            text-decoration: none;
+            color: #00baf2;
+        }
+        .playstore{
+            padding: 2% 0% 5% 10%;
+            display: flex;
+            }
+        .playstore .play-img {
+            width: 70%;
+        }
+        .playstore .play-img img{
+            width: 80px;
+            padding: 20% 0% 3% 0%;
+        }
+        .playstore .play-img h1{
+            font-size: 55px;
+            font-family: Inter, sans-serif;
+        }
+        .playstore .add img{
+            width: 60%;
+            padding: 10% 0% 0% 30%;
+
+        }
+        .play-img p{
+            font-size: 20px;
+            font-weight: 500;
+            font-family: Inter, sans-serif;
+            padding-bottom: 4%;
+        }
+        .paytm-app{
+            background-color: black;
+            color: white;
+            text-decoration:none ;
+            padding: 2% 4%;
+            font-size: 15px;
+            font-family: Inter, sans-serif;
+            border-radius: 50px;
+            
+        }
+        .paytm-app:hover{
+            background-color: azure;
+            color: black;
+        }
+
+        .recharge{
+            background-color: #00baf2;
+            padding: 3% 8% 2% 8%;
+            color: white;
+            font-family: Inter, sans-serif;
+            font-size: 18px;
+        }
+        .list{
+            display: flex;
+            justify-content: space-between;
+            padding: 3% 0%;
+        }
+        .mobile{
+            padding: 1% 2%;
+            border-radius: 25px
+        }
+        
+        .mobile i{
+            background-color: white;
+            color: rgb(1, 1, 79);
+            padding: 18%;
+            border-radius: 50px;
+        }
+        .mobile a{
+            color: white;
+            text-decoration: none;
+        }
+        .mobile:hover{
+            background-color: #0b9dc9;
+        }
+        .book-buy{
+            background-color: #0f4a8a;
+            padding: 3% 8% 2% 8%;
+            color: white;
+            font-family: Inter, sans-serif;
+            font-size: 18px;
+        }
+        .list-card{
+            display: flex;
+            justify-content: space-between;
+            padding: 3% 0%;
+        }
+        
+        .mobile-card{
+            padding: 1% 2%;
+            border-radius: 25px
+        }
+        
+        .mobile-card i{
+            background-color: white;
+            color: rgb(1, 1, 79);
+            padding: 18%;
+            border-radius: 50px;
+        }
+        .mobile-card a{
+            color: white;
+            text-decoration: none;
+        }
+        .mobile-card:hover{
+            background-color: #03264d;
+        }
+        
+        .Instruments{
+            padding: 5% 10% 1% 12%;
+            font-family: Inter, sans-serif;
+        }
+        .Instruments h1{
+            font-size: 40px;
+            font-weight: 700;
+        }
+        .payment-instruments{
+            padding: 2% 0% 5% 10%;
+            display: flex;
+            background-color: rgb(220, 239, 244)
+            }
+        .payment-instruments  .play-img {
+            width: 60%;
+        }
+        .payment-instruments .play-img img{
+            width: 80px;
+            padding: 20% 0% 3% 0%;
+        }
+        .payment-instruments .play-img h1{
+            font-size: 35px;
+            font-family: Inter, sans-serif;
+        }
+        .payment-instruments .add img{
+            width: 80%;
+            padding: 15% 0% 0% 10%;
+
+        }
+        .payment-instruments p{
+            font-size: 20px;
+            font-weight: 500;
+            font-family: Inter, sans-serif;
+            padding-bottom: 10% !important;
+        }
+        .payment-transfer{
+            padding: 2% 0% 5% 10%;
+            display: flex;
+            background-color: rgb(220, 239, 244)
+        }
+
+        .payment-transfer  .play-img {
+            width: 60%;
+        }
+        .payment-transfer .play-img img{
+            width: 80px;
+            padding: 20% 0% 3% 0%;
+        }
+        .payment-transfer .play-img h1{
+            font-size: 35px;
+            font-family: Inter, sans-serif;
+        }
+        .payment-transfer .add img{
+            width: 80%;
+            padding: 15% 0% 0% 10%;
+
+        }
+        .payment-transfer p{
+            font-size: 20px;
+            font-weight: 500;
+            font-family: Inter, sans-serif;
+            padding-bottom: 10% !important;
+        }
+        
+        .hdfc {
+            padding: 3% 6% 0% 6%  ;
+            width: 35%;
+            background-color:rgb(220, 239, 244) ;
+            border-radius: 20px;
+        }    
+        .hdfc .hdfc-img , .sbi .hdfc-img{
+            width: 35%;
+        }
+        .hdfc img {
+            width: 100%;
+        }
+        .hdfc a{
+            text-decoration: none;
+            color: rgb(3, 204, 244);
+            font-weight: 500;
+        }
+        .sbi img{
+            width:100%
+        }
+        .sbi{
+            margin-left: 5%;
+            padding: 8% 6% 0% 6%  ;
+            width: 35%;
+            background-color:rgb(220, 239, 244) ;
+            border-radius: 20px;
+        }
+        .cards{
+            display: flex;
+        }
+        .sbi a{
+            text-decoration: none;
+            color: rgb(3, 204, 244);
+            font-weight: 500;
+        }
+
+
+        @media(max-width:600px){
+            .nav-bar img{
+                width: 110px;
+            }
+            .signin{
+                width: 20%;
+            }
+        }  
+
+    </style>
+</head>
+<body>
+    <nav class="nav-bar">
+        <a href="">
+            <img src="./images/paytmlogo.svg" alt="paytmlogo">
+        </a>
+        <a href="">Paytm for Consumers</a>
+        <a href="">Paytm for Bussiness</a>
+        <a href="">Investor Relations</a>
+        <a href="">Company</a>
+        <a href="">Career</a>
+        <a class="signin" href="">
+            <span>Sign In</span>
+            <i class="fa-solid fa-user">   </i>
+        </a>
+    </nav>  
+    <div class="anounce">
+        <h2><i class="fa-solid fa-bullhorn"> </i> We have received approval from NPCI as a Third-Party Application Provider (TPAP).<a href=""> Click to know more</a></h2>
+    </div> 
+    <div class="playstore">
+        <div class="play-img">
+            <img src="./images/paytm3.avif" alt="payment logo">
+            <h1>
+                India's Most-loved Payments App
+            </h1>
+            <p>Recharge & pay bills, book flights & movie tickets,<br>open a savings account, invest in stocks & mutual <br>funds,and do a lot more.</p>
+            <a class="paytm-app" href="">Download Paytm App
+                <i class="fa-brands fa-apple"></i>
+                <i class="fa-brands fa-google-play"></i>
+            </a>
+        </div>
+        <div class="add">
+        <img src="./images/adphoto.avif" alt="ads">
+        </div>
+    </div>
+
+    <div class="recharge">
+        <h1>Recharge & Pay Bills on Paytm.</h1>
+        <div class="list">
+            
+            <div class="mobile">
+                <a href="">
+                    <i class="fa-solid fa-mobile"></i>
+                    <p>
+                        Recharge<br>
+                        Prepaid<br>
+                        Mobile >
+                    </p>
+                </a>
+            </div>
+            <div class="mobile">
+                <a href="">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <p>
+                        Pay<br>
+                        Electricity <br>
+                        Bill >
+                    </p>
+                </a>
+            </div>
+            <div class="mobile">
+                <a href="">
+                    <i class="fa-solid fa-satellite-dish"></i>
+                    <p>
+                        Recharge <br>
+                        DTH <br>
+                        Connection >
+                    </p>
+                </a>
+            </div>
+           <div class="mobile">
+            <a href="">
+                <i class="fa-solid fa-gas-pump"></i>
+                <p>
+                    Book <br>
+                    Gas <br>
+                    Cylinder >
+                </p>
+            </a>
+           </div>
+           <div class="mobile">
+            <a href="">
+                <i class="fa-solid fa-route"></i>
+                <p>
+                    Pay<br>
+                    Broadband &<br>
+                    Landline Bill >
+                </p>
+            </a>
+           </div>
+            <div class="mobile">
+                <a href="">
+                    <i class="fa-solid fa-book"></i>
+                    <P>
+                        pay<br>
+                        Education<br>
+                        Fee >
+                    </P>
+                </a>
+            </div>        
+        </div>
+    </div>
+
+    
+    <div class="book-buy">
+        <h1>Book & Buy on Paytm.</h1>
+        <div class="list">
+            
+            <div class="mobile-card">
+                <a href="">
+                    <i class="fa-solid fa-film"></i>
+                    <p>
+                        Movie <br>
+                        Tickets >
+                    </p>
+                </a>
+            </div>
+            <div class="mobile-card">
+                <a href="">
+                    <i class="fa-solid fa-plane-departure"></i>
+                    <p>
+                        Flight <br>
+                        Tickets >
+                    </p>
+                </a>
+            </div>
+            <div class="mobile-card">
+                <a href="">
+                    <i class="fa-solid fa-bus"></i>
+                    <p>
+                        Bus <br>
+                        Tickets >
+                    </p>
+                </a>
+            </div>
+           <div class="mobile-card">
+            <a href="">
+                <i class="fa-solid fa-train"></i>
+                <p>
+                    Train <br>
+                    Tickets >
+                </p>
+            </a>
+           </div>
+           <div class="mobile-card">
+            <a href="">
+                <i class="fa-solid fa-umbrella"></i>
+                <p>
+                    Buy <br>
+                    Insurance >
+                </p>
+            </a>
+           </div>
+            <div class="mobile-card">
+                <a href="">
+                    <i class="fa-solid fa-money-bill-trend-up"></i>
+                    <P>
+                        Invest <br>
+                        in Stocks >
+                    </P>
+                </a>
+            </div>        
+        </div>
+    </div>
+    <div class="Instruments">
+        <h1>Paytm Payment Instruments</h1>
+    
+        <div class="payment-instruments">
+            <div class="play-img">
+                <img src="./images/paytmwallet.png" alt="payment logo">
+                <h1>
+                    The Fastest Way to Pay In-store & Online.
+                </h1>
+                <p>Load up your Paytm Wallet for free and make payments in a jiffy at over 21 million stores, websites and apps.<br><br><br>
+                <a class="paytm-app" href="">Download Paytm App
+                    <i class="fa-brands fa-apple"></i>
+                    <i class="fa-brands fa-google-play"></i>
+                </a>
+            </div>
+            <div class="add">
+                <img src="./images/paytmwallet2.png" alt="ads">
+            </div>
+        </div>
+        <br> <br> <br>
+        <div class="payment-transfer">
+            <div class="play-img">
+                <img src="./images/paytmtransfer.png" alt="transfer">
+                <h1>
+                    Pay anyone directly from your bank account.
+                </h1>
+                <p>Pay anyone, everywhere. Make contactless & secure payments in-stores or online using Paytm Wallet or Directly from your Bank Account. Plus, send & receive money from anyone.
+                    .<br><br><br>
+                <a class="paytm-app" href="">Download Paytm App
+                    <i class="fa-brands fa-apple"></i>
+                    <i class="fa-brands fa-google-play"></i>
+                </a>
+            </div>
+            <div class="add">
+                <img src="./images/paytmtransfer2.png" alt="transfer2">
+            </div>
+        </div>
+        <br><br><br>
+    
+        <div class="cards">
+            <div class="hdfc">
+                <img class="hdfc-img" src="./images/hdfc.png" alt="hdfc">
+                <h1>Unlimited Cashback Every time</h1>
+                <h3>Paytm HDFC Bank Select Credit Card. A card with assured Cashback and incredible offers.</h3>
+                <p>*Paytm Payments Bank does not provide any loan or credit card on the Paytm App.<a href="">Know more</a></p>
+                <img src="./images//hdfccard.webp" alt="hdfccard">
+            </div>
+            <div class="sbi">
+                <img class="hdfc-img" src="./images/sbi.png" alt="hdfc">
+                <h1>Unlimited Cashback Every time</h1>
+                <h3>Paytm HDFC Bank Select Credit Card. A card with assured Cashback and incredible offers.</h3>
+                <p>*Paytm Payments Bank does not provide any loan or credit card on the Paytm App. <a href="">Know more</a> </p>
+                <img src="./images/sbicard.webp" alt="hdfccard">
+            </div>
+        </div>
+</div>
+</body>
+</html>
